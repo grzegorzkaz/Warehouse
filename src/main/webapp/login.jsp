@@ -21,7 +21,7 @@
         <input type="hidden" name="submitted" value="true">
         Login: <input type="text" name="login"><br>
         Password: <input type="password" name="password"><br>
-        <input type="submit" value="Log in">
+        <input type="submit" name="action" value="Log in">
     </p>
 </form>
 

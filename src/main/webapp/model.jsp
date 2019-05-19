@@ -53,5 +53,9 @@
 
 </table>
 
+<form action="login" method="post">
+<br><br><br><input type="submit" name="action" value="Log out">
+</form>
+
 </body>
 </html>
