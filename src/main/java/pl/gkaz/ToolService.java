@@ -21,6 +21,18 @@ public class ToolService {
         return tools;
     }
 
+    public void takeTool(int id){
+        setAvailability(id, false);
+    }
+
+    public void returnTool(int id){
+        setAvailability(id, true);
+    }
+
+    private void setAvailability(int id, boolean isAvailable){
+        getTool(id).ifPresent(tool -> tool.setAvailable(isAvailable));
+    }
+
     public Optional<Tool> getTool(int id){
         return tools.stream().filter(tool -> tool.getId() == id).findAny();
     }

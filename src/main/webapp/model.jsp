@@ -18,6 +18,7 @@
         <th>Name</th>
         <th>Tool type</th>
         <th>Available</th>
+        <th>Take/Return</th>
     </tr>
 
     <c:forEach items="${applicationScope.tools}" var="tool">
@@ -28,9 +29,23 @@
             <c:choose>
                 <c:when test="${tool.available}">
                     <td style="background-color: GREEN"></td>
+                    <td>
+                        <form>
+                            <input type="hidden" name="action" value="take">
+                            <input type="hidden" name="id" value="${tool.id}">
+                            <input type="submit" value="Take">
+                        </form>
+                    </td>
                 </c:when>
                 <c:otherwise>
                     <td style="background-color: RED"></td>
+                    <td>
+                        <form>
+                            <input type="hidden" name="action" value="return">
+                            <input type="hidden" name="id" value="${tool.id}">
+                            <input type="submit" value="Return">
+                        </form>
+                    </td>
                 </c:otherwise>
             </c:choose>
         </tr>
