@@ -1,10 +1,10 @@
-package pl.gkaz;
+package pl.gkaz.model;
 
 import java.io.Serializable;
 
 public class Tool implements Serializable {
 
-    private int id;
+    private Long id;
     private String name;
     private ToolType type;
     private boolean available;
@@ -12,18 +12,18 @@ public class Tool implements Serializable {
     public Tool() {
     }
 
-    public Tool(int id, String name, ToolType status, boolean available) {
+    public Tool(Long id, String name, ToolType status, boolean available) {
         this.id = id;
         this.name = name;
         this.type = status;
         this.available = available;
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
